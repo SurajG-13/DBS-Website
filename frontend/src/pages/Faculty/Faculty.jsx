@@ -1,8 +1,8 @@
 import React from "react";
-import AdminMembers from "./AdminMembers";
-import OfficeStaff from "./OfficeStaff";
-import TeachingStaff from "./teachingStaff";
-import NonTeachingStaff from "./nonTeachingStaff";
+import AdminMembers from "./AdminMembers.jsx";
+import OfficeStaff from "./OfficeStaff.jsx";
+import TeachingStaff from "./TeachingStaff.jsx";
+import NonTeachingStaff from "./NonTeachingStaff.jsx";
 
 /**
  * ======================================================
