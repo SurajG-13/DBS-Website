@@ -25,7 +25,7 @@ import {
 
 
 import Home from "./pages/Home/Home.jsx";
-import Layout from "./Layout/layout.jsx";
+import Layout from "./layout/Layout.jsx";
 
 import Faculty from "./pages/Faculty/faculty.jsx";
 import Facilites from "./pages/Facilities/Facilities.jsx";
