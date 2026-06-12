@@ -1,121 +1,230 @@
 import React from "react";
 import { Assets } from "../../constants/ImageDB";
 
-/**
- * ======================================================
- * CO-CURRICULAR ACTIVITIES PAGE
- * ------------------------------------------------------
- * - Responsive grid layout
- * - Clean card-based design
- * - Optimised for mobile → large screens
- * ======================================================
- */
-
 export default function Activities() {
+  const placeholder = Assets.placeholderImage;
 
-  const Red = Assets.placeholderImage;
-  /**
-   * Activities data
-   * Each item represents one co-curricular activity
-   */
   const activities = [
     {
       title: "Music",
-      img: Red,
+      img: placeholder,
       desc:
-        "Red House stands for passion, courage, and relentless determination. Inspired by Saint Joseph, it nurtures leadership and resilience.",
+        "Music education nurtures creativity, confidence, discipline and emotional expression. Students develop vocal and instrumental skills while discovering the joy of performing arts.",
     },
     {
       title: "Dance",
-      img: Red,
+      img: placeholder,
       desc:
-        "Blue House represents wisdom, integrity, and calm confidence. Guided by Saint Teresa of Kolkata, members lead with clarity and kindness.",
+        "Dance encourages self-expression, teamwork and cultural appreciation. Through various forms of dance, students build confidence, coordination and artistic talent.",
     },
     {
       title: "Karate",
-      img: Red,
+      img: placeholder,
       desc:
-        "Green House embodies growth, harmony, and perseverance. Inspired by Dr. APJ Abdul Kalam, ambition and teamwork thrive here.",
+        "Karate develops physical fitness, self-discipline, focus and self-defense skills. Students learn perseverance, respect and confidence through structured training.",
     },
     {
       title: "Guitar",
-      img: Red,
+      img: placeholder,
       desc:
-        "Yellow House symbolizes optimism, energy, and creativity. Inspired by Rabindranath Tagore, members shine in academics, culture, and service.",
+        "Guitar lessons help students enhance concentration, patience and creativity while developing a lifelong appreciation for music and performance.",
     },
     {
-      title: "Drawing",
-      img: Red,
+      title: "Drawing & Art",
+      img: placeholder,
       desc:
-        "Yellow House symbolizes optimism, energy, and creativity. Inspired by Rabindranath Tagore, members shine in academics, culture, and service.",
+        "Art activities foster imagination, observation and creative thinking. Students explore different techniques while expressing their ideas visually.",
     },
     {
       title: "Yoga",
-      img: Red,
+      img: placeholder,
       desc:
-        "Yellow House symbolizes optimism, energy, and creativity. Inspired by Rabindranath Tagore, members shine in academics, culture, and service.",
+        "Yoga promotes physical well-being, mental focus and emotional balance. Regular practice helps students develop healthy habits and inner confidence.",
     },
   ];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-      
-      {/* ==================================================
-          PAGE HEADING
-      =================================================== */}
-      <section className="mb-10 text-center">
-        <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-600">
-          Co-Curricular Activities
-        </h1>
+    <main className="bg-slate-50 min-h-screen">
+      {/* ==========================================
+          HERO SECTION
+      ========================================== */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900 via-blue-700 to-indigo-900" />
 
-        <p className="mt-4 text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
-          The school is committed to the all-round development of the personality
-          of the students. Extra-curricular activities are regarded as an
-          important part of the total learning experience.
-        </p>
-      </section>
+        <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
 
-      {/* ==================================================
-          ACTIVITIES GRID
-          - 1 column on mobile
-          - 2 columns on tablets
-          - 3 columns on desktops
-      =================================================== */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {activities.map((activity, idx) => (
-          <article
-            key={idx}
-            aria-labelledby={`activity-${idx}-title`}
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-24 text-center text-white pt-32">
+          <span className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-sm tracking-wide">
+            Student Development
+          </span>
+
+          <h1
             className="
-              bg-white rounded-lg overflow-hidden
-              shadow-sm hover:shadow-xl
-              transition-all duration-300
-              hover:-translate-y-1
+              mt-6
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-bold
+              font-playfairDisplay
             "
           >
-            {/* Activity Image */}
-            <img
-              src={activity.img}
-              alt={`${activity.title} activity`}
-              loading="lazy"
-              className="w-full h-48 sm:h-56 md:h-64 object-cover"
-            />
+            Extra-Curricular Activities
+          </h1>
 
-            {/* Activity Content */}
-            <div className="p-4 sm:p-6 flex flex-col h-full">
-              <h2
-                id={`activity-${idx}-title`}
-                className="text-xl sm:text-2xl font-semibold text-center mb-3"
-              >
-                {activity.title}
-              </h2>
+          <p
+            className="
+              mt-6
+              max-w-3xl
+              mx-auto
+              text-white/80
+              text-base
+              md:text-lg
+              leading-relaxed
+            "
+          >
+            Education extends beyond the classroom. Our co-curricular
+            programmes help students discover their talents, build
+            confidence, develop leadership skills and achieve holistic
+            growth.
+          </p>
+        </div>
+      </section>
 
-              <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify">
-                {activity.desc}
-              </p>
-            </div>
-          </article>
-        ))}
+      {/* ==========================================
+          INTRODUCTION CARD
+      ========================================== */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 -mt-14 relative z-10">
+        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">
+              Learning Beyond Academics
+            </h2>
+
+            <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+              Co-curricular activities play a vital role in the overall
+              development of students. They encourage creativity,
+              teamwork, discipline and self-confidence while helping
+              learners discover their unique talents and interests.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+          ACTIVITIES GRID
+      ========================================== */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+          {activities.map((activity, index) => (
+            <article
+              key={index}
+              className="
+                group
+                bg-white
+                rounded-3xl
+                overflow-hidden
+                border
+                border-slate-200
+                shadow-sm
+                hover:shadow-2xl
+                transition-all
+                duration-500
+                hover:-translate-y-2
+              "
+            >
+              {/* ==========================
+                  IMAGE
+              ========================== */}
+              <div className="overflow-hidden h-64">
+                <img
+                  src={activity.img}
+                  alt={activity.title}
+                  loading="lazy"
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    group-hover:scale-110
+                  "
+                />
+              </div>
+
+              {/* ==========================
+                  CONTENT
+              ========================== */}
+              <div className="p-7">
+                <h3
+                  className="
+                    text-2xl
+                    font-bold
+                    text-slate-800
+                    mb-4
+                  "
+                >
+                  {activity.title}
+                </h3>
+
+                <p
+                  className="
+                    text-slate-600
+                    leading-relaxed
+                    text-justify
+                  "
+                >
+                  {activity.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ==========================================
+          BOTTOM CTA
+      ========================================== */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+        <div
+          className="
+            rounded-3xl
+            bg-gradient-to-r
+            from-blue-900
+            via-blue-800
+            to-indigo-900
+            p-10
+            text-center
+            text-white
+          "
+        >
+          <h3
+            className="
+              text-3xl
+              md:text-4xl
+              font-bold
+              font-playfairDisplay
+            "
+          >
+            Nurturing Talent, Building Character
+          </h3>
+
+          <p
+            className="
+              mt-4
+              max-w-3xl
+              mx-auto
+              text-white/80
+              leading-relaxed
+            "
+          >
+            Through a wide range of co-curricular opportunities, we
+            encourage every student to explore their passions, develop
+            leadership qualities and become confident, well-rounded
+            individuals.
+          </p>
+        </div>
       </section>
     </main>
   );

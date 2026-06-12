@@ -30,15 +30,15 @@ export default function EventPage() {
   }
 
   return (
-    <main className="px-4 md:px-10 lg:px-16 py-10">
+    <main className="px-4 md:px-10 lg:px-16 py-10 pt-32">
       {/* Event Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">{event.title}</h1>
-        <p className="text-sm text-gray-500">{event.date}</p>
+        <h1 className="text-4xl font-bold">{event.title}</h1>
+        <p className="text-base text-gray-500">{event.date}</p>
       </div>
 
       {/* Images Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {event.images.map((img, index) => (
           <img
             key={index}
@@ -48,7 +48,46 @@ export default function EventPage() {
             onClick={() => setActiveImage(img)}
           />
         ))}
-      </section>
+      </section> */}
+
+ {/* Images Grid */}
+<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  {event.images.map((img, index) => (
+    <div
+      key={index}
+      className="
+        group
+        overflow-hidden
+        rounded-2xl
+        bg-white
+        shadow-sm
+        hover:shadow-xl
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+      onClick={() => {
+        setActiveImage(img);
+      }}
+    >
+      <div className="overflow-hidden">
+        <img
+          src={img}
+          alt={`${event.title} ${index + 1}`}
+          loading="lazy"
+          className="
+            w-full
+            h-72
+            object-cover
+            group-hover:scale-105
+            transition-transform
+            duration-500
+          "
+        />
+      </div>
+    </div>
+  ))}
+</section>
 
       {/* LIGHTBOX MODAL */}
       {activeImage && (

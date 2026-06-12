@@ -36,12 +36,17 @@ import AcademicCalendar from "./components/AcademicCalender.jsx";
 import Gallery from "./pages/Gallery/Gallery.jsx";
 import EventPage from "./pages/Gallery/Event.jsx";
 
+import Admissions from "./pages/Admission/Admission.jsx";
+import ContactUs from "./pages/Contact/ContactUs.jsx";
+import AboutUs from "./pages/About/AboutUs.jsx";
+import RulesAndRegulations from "./pages/Cocurricular/Rules.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             {/* Index route for the root path (/) */}
             <Route path="" element={<Home />} /> 
+            <Route path='/About-Us' element={< AboutUs/>} />
             <Route path='/School-Faculty' element={<Faculty/>} />
             <Route path='/School-Houses' element={<Houses/>} />
             <Route path='/School-Facilities' element={<Facilites/>}/>
@@ -49,6 +54,11 @@ const router = createBrowserRouter(
             <Route path="/Academic-Calender" element={<AcademicCalendar/>}/>
             <Route path='/School-Gallery' element={<Gallery/>}/>
             <Route path='/School-Gallery/:eventId' element={<EventPage/>}/>
+            <Route path="/School-Admission" element={<Admissions/>}/>
+            <Route path="/Contact-Us" element={<ContactUs/>}/>
+            <Route path='/School-Rules' element={<RulesAndRegulations/>}/>
+
+            
         </Route>
     )
 );
