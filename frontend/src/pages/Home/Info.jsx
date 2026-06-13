@@ -78,7 +78,7 @@ export default function Info() {
             <div
               className="
                 lg:col-span-4
-                bg-gradient-to-br
+                bg-linear-to-br
                 from-blue-900
                 via-blue-800
                 to-indigo-900
@@ -108,7 +108,7 @@ export default function Info() {
 
               {/* Name */}
               <h2 className="mt-6 text-2xl font-bold text-center">
-                Sr. Litty Mathhew
+                Sr. Litty Mathew
               </h2>
 
               {/* Designation */}
@@ -221,7 +221,7 @@ export default function Info() {
                     text-slate-800
                   "
                 >
-                  Sr. Litty Mathhew
+                  Sr. Litty Mathew
                 </p>
 
                 <p className="mt-1 text-slate-500">

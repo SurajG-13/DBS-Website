@@ -10,7 +10,7 @@ import { Assets } from "../../constants/ImageDB";
 
 const adminMembers = [
   {
-    name: "Sr. Litty Mathhew",
+    name: "Sr. Litty Mathew",
     designation: "Principal",
     dp: Assets.principalImage,
   },

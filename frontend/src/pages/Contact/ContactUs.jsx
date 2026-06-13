@@ -141,12 +141,12 @@ export default function ContactUs() {
               </p>
 
               <a
-                href="https://www.donboscoschoolthakurnagar.com"
+                href="https://www.dbsthakurnagar.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 font-medium hover:text-blue-700 break-all"
               >
-                www.donboscoschoolthakurnagar.com
+                www.dbsthakurnagar.com
               </a>
             </div>
 

@@ -44,6 +44,7 @@ export const galleryEvents = [
       "https://res.cloudinary.com/image-bundles/image/upload/v1770140429/IMG-20260126-WA0017_f8irzb.jpg",
       "https://res.cloudinary.com/image-bundles/image/upload/v1770140425/IMG-20260126-WA0012_re0ipi.jpg",
       "https://res.cloudinary.com/image-bundles/image/upload/v1770140422/IMG-20260126-WA0011_knsxta.jpg",
+      "https://res.cloudinary.com/image-bundles/image/upload/v1770140418/IMG-20260126-WA0002_dllozd.jpg",
      
     ],
   },
